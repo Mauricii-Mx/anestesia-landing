@@ -1,0 +1,24 @@
+/* src/styles/global.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom CSS variables for brand (fallback for non‑Tailwind usage) */
+:root {
+  --brand-vibrant: #005BF5; /* Primary / CTA */
+  --brand-medium: #2760C2;  /* Accent / Hover */
+  --brand-dark: #39598F;    /* Headings */
+  --brand-gray: #37455C;    /* Text */
+  --brand-light: #F8FAFC;   /* Secondary background */
+}
+
+/* Simple fade‑in on scroll – Tailwind utility classes can be added later */
+[data-animate] {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+[data-animate].in-view {
+  opacity: 1;
+  transform: none;
+}

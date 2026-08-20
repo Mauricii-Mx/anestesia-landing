@@ -1,17 +1,113 @@
 ---
-
+import Layout from '../layouts/Layout.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout>
+  <!-- Navbar -->
+  <nav class="flex items-center justify-between px-6 py-4 bg-white shadow-md">
+    <a href="/" class="flex items-center">
+      <img src="/images/logo.svg" alt="Anestesia Digital" class="h-10 w-auto" />
+    </a>
+    <ul class="flex space-x-6 text-sm font-medium">
+      <li><a href="#services" class="text-brand-gray hover:text-brand-vibrant">Servicios</a></li>
+      <li><a href="#process" class="text-brand-gray hover:text-brand-vibrant">Proceso</a></li>
+      <li><a href="#contact" class="text-brand-gray hover:text-brand-vibrant">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="bg-brand-light text-center py-20" data-animate>
+    <h1 class="text-4xl md:text-5xl font-bold text-brand-dark mb-4">
+      Marketing especializado para profesionales de la salud
+    </h1>
+    <p class="text-lg text-brand-gray mb-8">
+      Impulsa tu práctica con estrategias digitales diseñadas para el sector sanitario.
+    </p>
+    <a href="#contact" class="btn-primary px-8 py-3 rounded-lg shadow-md hover:bg-brand-medium transition-colors">
+      Agenda una llamada
+    </a>
+  </section>
+
+  <!-- Testimonios / Prueba Social -->
+  <section class="py-16 bg-white" data-animate>
+    <h2 class="text-3xl font-semibold text-center text-brand-dark mb-10">Lo que dicen nuestros clientes</h2>
+    <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+      <div class="p-6 rounded-lg shadow-md bg-brand-light">
+        <p class="text-brand-gray mb-4">"Aumento del 35% en citas online en 3 meses"</p>
+        <cite class="block text-brand-dark font-medium">Clínica SaludPlus</cite>
+      </div>
+      <div class="p-6 rounded-lg shadow-md bg-brand-light">
+        <p class="text-brand-gray mb-4">"Nuestro posicionamiento local se duplicó"</p>
+        <cite class="block text-brand-dark font-medium">Centro Médico Vida</cite>
+      </div>
+    </div>
+  </section>
+
+  <!-- Servicios -->
+  <section id="services" class="py-20 bg-brand-light" data-animate>
+    <h2 class="text-3xl font-semibold text-center text-brand-dark mb-12">Servicios</h2>
+    <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+      <div class="p-6 rounded-lg shadow-md bg-white hover:shadow-xl transition-shadow">
+        <h3 class="text-xl font-bold text-brand-dark mb-2">Gestión de redes sociales</h3>
+        <p class="text-brand-gray">Contenido alineado a la ética médica y a tu marca.</p>
+      </div>
+      <div class="p-6 rounded-lg shadow-md bg-white hover:shadow-xl transition-shadow">
+        <h3 class="text-xl font-bold text-brand-dark mb-2">Publicidad segmentada</h3>
+        <p class="text-brand-gray">Campañas en Google, LinkedIn y plataformas especializadas.</p>
+      </div>
+      <div class="p-6 rounded-lg shadow-md bg-white hover:shadow-xl transition-shadow">
+        <h3 class="text-xl font-bold text-brand-dark mb-2">Landing pages a medida</h3>
+        <p class="text-brand-gray">Diseños rápidos y optimizados para conversión.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Proceso Paso a Paso -->
+  <section id="process" class="py-20 bg-white" data-animate>
+    <h2 class="text-3xl font-semibold text-center text-brand-dark mb-12">Cómo trabajamos</h2>
+    <ol class="flex flex-col md:flex-row md:justify-center md:space-x-12 max-w-4xl mx-auto">
+      <li class="flex-1 mb-8 md:mb-0">
+        <div class="flex items-center">
+          <span class="inline-block w-12 h-12 rounded-full bg-brand-vibrant text-white flex items-center justify-center font-bold mr-4">1</span>
+          <p class="text-brand-gray">Diagnóstico y definición de objetivos</p>
+        </div>
+      </li>
+      <li class="flex-1 mb-8 md:mb-0">
+        <div class="flex items-center">
+          <span class="inline-block w-12 h-12 rounded-full bg-brand-vibrant text-white flex items-center justify-center font-bold mr-4">2</span>
+          <p class="text-brand-gray">Estrategia personalizada</p>
+        </div>
+      </li>
+      <li class="flex-1 mb-8 md:mb-0">
+        <div class="flex items-center">
+          <span class="inline-block w-12 h-12 rounded-full bg-brand-vibrant text-white flex items-center justify-center font-bold mr-4">3</span>
+          <p class="text-brand-gray">Implementación y métricas</p>
+        </div>
+      </li>
+      <li class="flex-1">
+        <div class="flex items-center">
+          <span class="inline-block w-12 h-12 rounded-full bg-brand-vibrant text-white flex items-center justify-center font-bold mr-4">4</span>
+          <p class="text-brand-gray">Optimización continua</p>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <!-- Formulario de captura -->
+  <section id="contact" class="py-20 bg-brand-light" data-animate>
+    <h2 class="text-3xl font-semibold text-center text-brand-dark mb-8">Agenda tu llamada</h2>
+    <form class="max-w-xl mx-auto grid gap-4" method="POST" action="/">
+      <input type="text" name="name" placeholder="Nombre" required class="p-3 rounded border border-gray-300 focus:outline-none focus:border-brand-vibrant" />
+      <input type="email" name="email" placeholder="Email" required class="p-3 rounded border border-gray-300 focus:outline-none focus:border-brand-vibrant" />
+      <input type="tel" name="phone" placeholder="Teléfono (opcional)" class="p-3 rounded border border-gray-300 focus:outline-none focus:border-brand-vibrant" />
+      <textarea name="message" placeholder="¿En qué podemos ayudarte?" rows="4" class="p-3 rounded border border-gray-300 focus:outline-none focus:border-brand-vibrant"></textarea>
+      <button type="submit" class="btn-primary px-6 py-3 rounded-lg shadow-md hover:bg-brand-medium transition-colors">Enviar</button>
+    </form>
+  </section>
+
+  <!-- Footer institucional -->
+  <footer class="bg-white py-6 text-center">
+    <img src="/images/isotipo.svg" alt="Isotipo Anestesia Digital" class="mx-auto mb-2 h-8" />
+    <p class="text-brand-gray text-sm">© 2026 Anestesia Digital – Todos los derechos reservados.</p>
+  </footer>
+</Layout>
