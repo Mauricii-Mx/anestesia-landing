@@ -1,9 +1,167 @@
----
-import Layout from '../layouts/Layout.astro';
----
+<!DOCTYPE html>
 
-<Layout>
-  <header class="fixed top-0 w-full z-50 bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 max-w-container-max mx-auto px-6 lg:px-12 flex items-center justify-between"><div class="flex items-center gap-4"><img alt="Anestesia Digital Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuUZY2yxXRW4EJj43h-aVTteARA11p06dLGrCys8vEbs80ESGBCe9d9id-EhC2EinUQatWddKgQku5CBA1tW0IW1XMfo7bUZx-W4mUVkOQ7MeE-JrTPHxu1YVihJ3z_4W7VNiiY1go1jiDJPiwE85dr-Javz8hTin92Dtjg7pjHCOp1WyyExoYP0UWS43fuRnI8pN0f2xgpeZNwNlPgziUtOV5MIcuVN_RxqJGRDpXs8PA0F-dlS6dTilGe23p0vqTQ8U"/><span class="font-headline-sm text-headline-sm text-primary tracking-tight">Anestesia Digital</span></div><nav class="hidden md:flex items-center gap-8" data-active-classes="text-primary font-bold"><a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors font-medium" href="#">Servicios</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors font-medium" href="#">Planes</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors font-medium" href="#">Garantía</a></nav><div class="flex items-center gap-4"><button class="hidden md:block bg-primary-container text-on-primary px-6 py-2 rounded-full font-label-md text-label-md font-bold hover:bg-primary transition-all">Agendar Llamada</button><div class="w-8 h-8 rounded-full bg-primary-container flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-surface-container-lowest"><div class="flex flex-col w-full">
+<html lang="es" style=""><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "inverse-surface": "#2e3039",
+                "on-background": "#191b24",
+                "on-error": "#ffffff",
+                "inverse-on-surface": "#eff0fd",
+                "on-primary": "#ffffff",
+                "tertiary-fixed-dim": "#ffb59e",
+                "surface": "#ffffff",
+                "on-secondary-fixed": "#001944",
+                "tertiary-fixed": "#ffdbd0",
+                "on-secondary": "#ffffff",
+                "on-tertiary": "#ffffff",
+                "error": "#ba1a1a",
+                "outline-variant": "#c3c5d8",
+                "surface-dim": "#F9FAFB",
+                "on-tertiary-container": "#ffe3db",
+                "primary-container": "#005bf5",
+                "surface-container-low": "#ffffff",
+                "on-tertiary-fixed-variant": "#842500",
+                "background": "#ffffff",
+                "surface-container-highest": "#e1e1ee",
+                "outline": "#737687",
+                "primary-fixed-dim": "#b4c5ff",
+                "on-primary-fixed-variant": "#003daa",
+                "on-surface-variant": "#000000",
+                "surface-container-lowest": "#ffffff",
+                "primary": "#2760C2",
+                "on-primary-container": "#ffffff",
+                "on-primary-fixed": "#00174c",
+                "secondary": "#39598F",
+                "on-error-container": "#93000a",
+                "tertiary": "#962a00",
+                "surface-container-high": "#e7e7f4",
+                "secondary-variant-mid": "#39598f",
+                "secondary-fixed": "#d9e2ff",
+                "tertiary-container": "#bf3901",
+                "on-tertiary-fixed": "#3a0b00",
+                "surface-variant": "#e1e1ee",
+                "on-secondary-fixed-variant": "#004299",
+                "error-container": "#ffdad6",
+                "on-surface": "#2760C2",
+                "secondary-variant-dark": "#37455c",
+                "secondary-container": "#6899fe",
+                "inverse-primary": "#b4c5ff",
+                "surface-tint": "#0052de",
+                "primary-fixed": "#dbe1ff",
+                "surface-container": "#ffffff",
+                "surface-bright": "#ffffff",
+                "on-secondary-container": "#003072",
+                "secondary-fixed-dim": "#afc6ff"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+        },
+        "spacing": {
+                "gutter": "24px",
+                "container-max": "1200px",
+                "margin-desktop": "48px",
+                "stack-md": "16px",
+                "stack-sm": "8px",
+                "margin-mobile": "16px",
+                "stack-lg": "32px"
+        },
+        "fontFamily": {
+                "body-lg": [
+                        "Montserrat"
+                ],
+                "body-sm": [
+                        "Montserrat"
+                ],
+                "headline-md": [
+                        "Montserrat"
+                ],
+                "headline-xl": [
+                        "Montserrat"
+                ],
+                "label-md": [
+                        "Montserrat"
+                ],
+                "headline-lg": [
+                        "Montserrat"
+                ],
+                "headline-sm": [
+                        "Montserrat"
+                ],
+                "body-md": [
+                        "Montserrat"
+                ]
+        },
+        "fontSize": {
+                "body-lg": [
+                        "18px",
+                        {
+                                "lineHeight": "28px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "body-sm": [
+                        "14px",
+                        {
+                                "lineHeight": "20px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "headline-md": [
+                        "24px",
+                        {
+                                "lineHeight": "32px",
+                                "fontWeight": "700"
+                        }
+                ],
+                "headline-xl": [
+                        "48px",
+                        {
+                                "lineHeight": "56px",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "800"
+                        }
+                ],
+                "label-md": [
+                        "12px",
+                        {
+                                "lineHeight": "16px",
+                                "letterSpacing": "0.05em",
+                                "fontWeight": "500"
+                        }
+                ],
+                "headline-lg": [
+                        "32px",
+                        {
+                                "lineHeight": "40px",
+                                "fontWeight": "800"
+                        }
+                ],
+                "headline-sm": [
+                        "20px",
+                        {
+                                "lineHeight": "28px",
+                                "fontWeight": "700"
+                        }
+                ],
+                "body-md": [
+                        "16px",
+                        {
+                                "lineHeight": "24px",
+                                "fontWeight": "400"
+                        }
+                ]
+        }
+},
+    },
+  }
+</script></head><body class="bg-surface-container-lowest font-body-md text-on-surface-variant"><header class="fixed top-0 w-full z-50 bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 max-w-container-max mx-auto px-6 lg:px-12 flex items-center justify-between"><div class="flex items-center gap-4"><img alt="Anestesia Digital Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuUZY2yxXRW4EJj43h-aVTteARA11p06dLGrCys8vEbs80ESGBCe9d9id-EhC2EinUQatWddKgQku5CBA1tW0IW1XMfo7bUZx-W4mUVkOQ7MeE-JrTPHxu1YVihJ3z_4W7VNiiY1go1jiDJPiwE85dr-Javz8hTin92Dtjg7pjHCOp1WyyExoYP0UWS43fuRnI8pN0f2xgpeZNwNlPgziUtOV5MIcuVN_RxqJGRDpXs8PA0F-dlS6dTilGe23p0vqTQ8U"/><span class="font-headline-sm text-headline-sm text-primary tracking-tight">Anestesia Digital</span></div><nav class="hidden md:flex items-center gap-8" data-active-classes="text-primary font-bold"><a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors font-medium" href="#">Servicios</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors font-medium" href="#">Planes</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors font-medium" href="#">Garantía</a></nav><div class="flex items-center gap-4"><button class="hidden md:block bg-primary-container text-on-primary px-6 py-2 rounded-full font-label-md text-label-md font-bold hover:bg-primary transition-all">Agendar Llamada</button><div class="w-8 h-8 rounded-full bg-primary-container flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-surface-container-lowest"><div class="flex flex-col w-full">
 <!-- Hero Section -->
 <section class="relative w-full min-h-[600px] flex items-center pt-20 -mt-20 overflow-hidden bg-white bg-surface-container-lowest">
 <div class="absolute inset-0 z-0">
@@ -339,4 +497,4 @@ import Layout from '../layouts/Layout.astro';
 </div>
 </section>
 </div></main><footer class="w-full bg-surface-container-high py-16"><div class="max-w-container-max mx-auto px-6 lg:px-12"><div class="grid grid-cols-1 md:grid-cols-4 gap-gutter mb-12"><div class="col-span-1 md:col-span-1"><div class="flex items-center gap-3 mb-6"><img alt="Logo" class="h-6 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5IWwgsjN0eKl_5-LTSN8IHec93s3YUF9XUK8aINsc4qMoJeKEb-Th1z7ksKOhOc1kPhVP1CMgeXJnUp5iF1Y3GE0bgzLbVhzwHh1f6QR7drzrD20EI4wJCmFC8b2XF69XwV2cBUdzvKKh_l1dU0-RkipCgMecIl6SBe3NUB5Hpt5KDXzux2yzaKbVzEmpIx67Up_S64bzSn7Gc-ig0MjSTv3SJQVtTrMsPH6I4704DBEC9hiaUNyVWmSs1tUAQojFOEo"/><span class="font-headline-sm text-headline-sm text-primary font-bold">Anestesia Digital</span></div><p class="font-body-md text-label-md text-on-surface-variant font-normal">Tecnología de precisión para el cuidado crítico y perioperatorio.</p></div><div><h4 class="font-headline-sm text-body-lg text-primary mb-6 font-bold">Navegación</h4><ul class="space-y-3"><li class="font-body-md text-label-md text-on-surface-variant hover:text-primary-container cursor-pointer transition-colors font-normal">Servicios</li><li class="font-body-md text-label-md text-on-surface-variant hover:text-primary-container cursor-pointer transition-colors font-normal">Protocolos</li><li class="font-body-md text-label-md text-on-surface-variant hover:text-primary-container cursor-pointer transition-colors font-normal">Formación</li></ul></div><div><h4 class="font-headline-sm text-body-lg text-primary mb-6 font-bold">Legal</h4><ul class="space-y-3"><li class="font-body-md text-label-md text-on-surface-variant hover:text-primary-container cursor-pointer transition-colors font-normal">Términos de Uso</li><li class="font-body-md text-label-md text-on-surface-variant hover:text-primary-container cursor-pointer transition-colors font-normal">Privacidad de Datos</li><li class="font-body-md text-label-md text-on-surface-variant hover:text-primary-container cursor-pointer transition-colors font-normal">Cookies</li></ul></div><div><h4 class="font-headline-sm text-body-lg text-primary mb-6 font-bold">Contacto</h4><p class="font-body-md text-label-md text-on-surface-variant mb-2 font-normal">Calle de la Ciencia 42, Madrid</p><p class="font-body-md text-label-md text-on-surface-variant mb-2 font-normal">soporte@anestesiadigital.com</p><p class="font-body-md text-label-md text-on-surface-variant font-normal">+34 910 000 000</p></div></div><div class="border-t border-outline-variant pt-8 flex flex-col md:flex-row justify-between items-center gap-4"><p class="font-body-md text-label-md text-on-surface-variant font-normal">© 2024 Anestesia Digital. Todos los derechos reservados.</p><div class="flex gap-6"><span class="material-symbols-outlined text-secondary hover:text-primary-container cursor-pointer">share</span><span class="material-symbols-outlined text-secondary hover:text-primary-container cursor-pointer">clinical_notes</span></div></div></div></footer>
-</Layout>
+</body></html>
