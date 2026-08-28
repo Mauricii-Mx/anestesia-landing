@@ -22,5 +22,18 @@ import '../styles/global.css';
   </head>
   <body class="bg-brand-light text-brand-gray font-sans">
     <slot />
+    <script>
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+          }
+        });
+      }, { threshold: 0.1 });
+
+      document.querySelectorAll('[data-animate]').forEach((el) => {
+        observer.observe(el);
+      });
+    </script>
   </body>
 </html>
